@@ -1,5 +1,7 @@
 # Aplicação feita na semana NWL Expert
+
 API REST
+
  Método comuns
  - GET - Buscar uma informação
  - PUT - Alterar uma informação
@@ -9,7 +11,7 @@ API REST
  
  Os tipos de parâmetros
  - Body -   { }
- - Query Params - http://localhost:8085/users?nome=Daniele&idade=34 OPCIONAIS
+ - Query Params - http://localhost:8085/users?nome=nome&idade=0
  - Parâmetros de rotas http://localhost:8085/users/{nome}/{idade}
 
 ORM -> Object Relational Mapper 
