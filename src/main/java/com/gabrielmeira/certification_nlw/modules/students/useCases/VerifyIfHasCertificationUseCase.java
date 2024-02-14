@@ -3,22 +3,21 @@ package com.gabrielmeira.certification_nlw.modules.students.useCases;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.gabrielmeira.certification_nlw.modules.students.dto.VerifyHasCertificationDto;
-import com.gabrielmeira.certification_nlw.modules.students.repository.CertificationStudentRepository;
+import com.gabrielmeira.certification_nlw.modules.students.dto.VerifyHasCertificationDTO;
+import com.gabrielmeira.certification_nlw.modules.students.repositories.CertificationStudentRepository;
 
 @Service
 public class VerifyIfHasCertificationUseCase {
+
     @Autowired
-    private CertificationStudentRepository certificationStudantRepository;
+    private CertificationStudentRepository certificationStudentRepository;
 
-    public boolean execute(VerifyHasCertificationDto dto) {
-        var result = this.certificationStudantRepository.findByStudentEmailAndTechnology(
-            dto.getEmail(), dto.getTechnology());
-
-        if(!result.isEmpty()) {
+    public boolean execute(VerifyHasCertificationDTO dto) {
+        var result = this.certificationStudentRepository.findByStudentEmailAndTechnology(dto.getEmail(),
+                dto.getTechnology());
+        if (!result.isEmpty()) {
             return true;
         }
-
         return false;
     }
 }

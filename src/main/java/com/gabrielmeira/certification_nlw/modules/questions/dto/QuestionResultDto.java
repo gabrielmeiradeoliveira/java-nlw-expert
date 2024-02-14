@@ -12,11 +12,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class QuestionResultDto {
+public class QuestionResultDTO {
 
     private UUID id;
     private String technology;
     private String description;
 
-    private List<AlternativesResultDto> alternatives;
+    private List<AlternativesResultDTO> alternatives;
 }

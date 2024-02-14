@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class AlternativesResultDto {
+public class AlternativesResultDTO {
 
     private UUID id;
     private String description;
